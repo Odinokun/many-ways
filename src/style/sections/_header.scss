@@ -1,0 +1,114 @@
+.header {
+  padding-top: 10px;
+  padding-bottom: 10px;
+
+  @include min(680) {
+    padding-top: 17px;
+    padding-bottom: 17px;
+  }
+
+  .container {
+    display: flex;
+    align-items: center;
+  }
+
+  .btn {
+    height: 30px;
+
+    @include min(680) {
+      height: 42px;
+    }
+  }
+}
+
+.header__logo {
+  display: block;
+  flex: none;
+  width: 110px;
+  margin-right: auto;
+
+  @include min(375) {
+    width: 130px;
+  }
+  @include min(680) {
+    width: 223px;
+  }
+
+  svg {
+    width: 100%;
+  }
+}
+
+.header__call {
+  width: 30px;
+  height: 30px;
+  padding: 0;
+
+  @include min(600) {
+    width: auto;
+    height: 42px;
+    padding: 5px 28px;
+  }
+
+  svg {
+    fill: $dark;
+    width: 12px;
+    height: 12px;
+
+    @include min(600) {
+      display: none;
+    }
+  }
+
+  span {
+    display: none;
+
+    @include min(600) {
+      display: block;
+    }
+  }
+}
+
+.btn__services {
+  margin-left: 10px;
+  padding-right: 12px;
+  padding-left: 12px;
+  color: #fff;
+  background-color: $dark;
+
+  @include min(600) {
+    padding-right: 30px;
+    padding-left: 20px;
+  }
+
+  svg {
+    display: none;
+
+    @include min(375) {
+      display: block;
+      flex: none;
+      fill: #fff;
+      width: 12px;
+      height: 12px;
+      margin-right: 12px;
+    }
+    @include min(600) {
+      margin-right: 20px;
+    }
+  }
+}
+
+.btn__burger {
+  flex: none;
+  width: 30px;
+  height: 30px;
+  margin-left: 10px;
+  padding: 0;
+  border-radius: 50% !important;
+  background-color: $dark;
+
+  @include min(600) {
+    width: 42px;
+    height: 42px;
+  }
+}
