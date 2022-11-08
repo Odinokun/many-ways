@@ -1,7 +1,7 @@
 //BEGIN header
-#header.header.active
+#header.header
   #header__menu
-
+  #header__services
   .container
     a(href="/").header__logo
       include ../elements/logo
@@ -9,10 +9,10 @@
     a(href="tel:+18008889999").btn.header__call
       +svg('phone')
       span 1-800-888-9999
-    button.btn.btn__services
+    button.btn.btn__services#btn__services
       +svg('dots')
       span services
-    button.btn.btn__burger
+    button.btn.btn__burger#btn__burger
       include ../elements/burger
 
 //END   header

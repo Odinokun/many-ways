@@ -9,10 +9,15 @@
   top: 0;
   left: 0;
   display: block;
-  width: $burger-width;
-  height: $burger-height;
+  width: 30px;
+  height: 30px;
   cursor: pointer;
   opacity: 0;
+
+  @include min(680) {
+    width: 42px;
+    height: 42px;
+  }
 
   &:checked + .burger__label::before {
     transform: translateY($burger-height / 2 - $burger-item * .5) rotateZ(45deg);
@@ -26,17 +31,28 @@
 }
 
 .burger__label {
-  width: $burger-width;
-  height: $burger-height;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
   margin: auto;
+  padding-bottom: 6px;
   cursor: pointer;
   user-select: none;
   color: $burger-color;
   border-radius: 0;
 
+  @include min(680) {
+    width: 42px;
+    height: 42px;
+  }
+
   &::before,
   &::after {
     display: block;
+    width: $burger-width;
     height: $burger-item;
     content: '';
     transition: .5s;

@@ -21,12 +21,9 @@
     }
   }
 }
-/* begin menu is open */
-.header.active23 {
-  #header__menu {
-    opacity: 1;
-  }
 
+/* begin menu is open */
+.header.active {
   .header__logo {
     opacity: .1;
   }
@@ -34,31 +31,69 @@
   .logo__path {
     fill: #fff;
   }
+
   .header__call {
     opacity: .1;
     color: #fff;
     border-color: #fff;
+
     svg {
       fill: #fff;
     }
   }
-  .btn__services{
+
+  .btn__services {
+    pointer-events: none;
     opacity: .1;
   }
-  .btn__burger{
+
+  .btn__burger {
+    pointer-events: none;
+    opacity: .1;
+    border-color: #fff;
     background-color: #fff;
-    opacity: .1;
   }
-  //.burger__label,
+
   .burger__label::before,
-  .burger__label::after{
+  .burger__label::after {
     background: $dark;
   }
-  .burger__label::after{
+
+  .burger__label::after {
     filter: drop-shadow(0 $burger-item-shadow $dark);
   }
 }
+
 /* end   menu is open */
+
+/* begin active btns */
+.header.active {
+  .btn__services.active {
+    pointer-events: auto;
+    opacity: 1;
+    border-color: $highlight;
+    background-color: $highlight;
+  }
+
+  .btn__burger.active {
+    pointer-events: auto;
+    opacity: 1;
+    border-color: $highlight;
+    background-color: $highlight;
+
+    .burger__label::before,
+    .burger__label::after {
+      background: #fff;
+    }
+
+    .burger__label::after {
+      filter: drop-shadow(0 $burger-item-shadow transparent);
+    }
+  }
+}
+
+/* end   active btns */
+
 
 .header__logo {
   display: block;
@@ -83,7 +118,7 @@
   height: 30px;
   padding: 0;
 
-  @include min(600) {
+  @include min(680) {
     width: auto;
     height: 42px;
     padding: 5px 28px;
@@ -94,7 +129,7 @@
     width: 12px;
     height: 12px;
 
-    @include min(600) {
+    @include min(680) {
       display: none;
     }
   }
@@ -102,7 +137,7 @@
   span {
     display: none;
 
-    @include min(600) {
+    @include min(680) {
       display: block;
     }
   }
@@ -115,7 +150,7 @@
   color: #fff;
   background-color: $dark;
 
-  @include min(600) {
+  @include min(680) {
     padding-right: 30px;
     padding-left: 20px;
   }
@@ -131,7 +166,7 @@
       height: 12px;
       margin-right: 12px;
     }
-    @include min(600) {
+    @include min(680) {
       margin-right: 20px;
     }
   }
@@ -146,7 +181,7 @@
   border-radius: 50% !important;
   background-color: $dark;
 
-  @include min(600) {
+  @include min(680) {
     width: 42px;
     height: 42px;
   }
@@ -158,6 +193,26 @@
   left: 0;
   width: 100%;
   min-height: 100vh;
+  transition: .5s;
   opacity: 0;
   background-color: #51514e;
+
+  &.active {
+    opacity: 1;
+  }
+}
+
+#header__services {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-height: 100vh;
+  transition: .5s;
+  opacity: 0;
+  background-color: #51514e;
+
+  &.active {
+    opacity: 1;
+  }
 }
