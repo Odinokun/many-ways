@@ -3,3 +3,11 @@ $dark: #33332e;
 // ===== fonts =====
 $font: 'Inter', sans-serif;
 $font-title: 'PPMori', sans-serif;
+
+// ===== burger =====
+$burger-height: 9px;
+$burger-width: 14px;
+$burger-color: #fff;
+$burger-item: 2px;
+$burger-item-offset: $burger-height - $burger-item * 2;
+$burger-item-shadow: -1 * $burger-item - ($burger-item-offset - $burger-item) / 2;
