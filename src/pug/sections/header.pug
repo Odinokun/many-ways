@@ -1,7 +1,8 @@
 //BEGIN header
 #header.header
-  #header__menu
-  #header__services
+  include ../elements/header-menu
+  include ../elements/header-services
+
   .container
     a(href="/").header__logo
       include ../elements/logo
@@ -14,5 +15,4 @@
       span services
     button.btn.btn__burger#btn__burger
       include ../elements/burger
-
 //END   header

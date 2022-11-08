@@ -8,12 +8,10 @@ module.exports = function() {
     $(this).toggleClass('active');
   });
 
-  $('#btn__burger').on('click', function (e){
-    e.preventDefault();
-
+  $('#btn__burger input').on('click', function (){
     $('#header').toggleClass('active');
     $('#header__menu').toggleClass('active');
-    $(this).toggleClass('active');
+    $("#btn__burger").toggleClass('active');
   });
 
   $(document).keyup((e) => {

@@ -1,0 +1,21 @@
+mixin item(icon, title)
+  li.header-services__item
+    a(href="#").header-services__link
+      .header-services__icon
+        svg
+            use(xlink:href="assets/img/sprite.svg#" + icon)
+      .header-services__title #{title}
+      .header-services__arr
+        +svg('arr-service')
+
+
+//BEGIN header__services
+#header__services.header__services.header-services
+  ul.header-services__list
+    +item('kitchen', 'Kitchen')
+    +item('bath', 'Bathroom')
+    +item('floor', 'Flooring')
+    +item('deck', 'Deck')
+    +item('basement', 'Basement')
+    +item('roof', 'Roofing')
+//END   header__services
