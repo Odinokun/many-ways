@@ -1,0 +1,32 @@
+.scroll-down {
+  position: absolute;
+  z-index: 10;
+  top: 15px;
+  left: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 32px;
+  height: 64px;
+  cursor: pointer;
+  border-radius: 16px;
+  background-color: #fff;
+
+  @include min(680) {
+    top: 40px;
+    left: 40px;
+  }
+
+  &:hover {
+    svg {
+      transform: translateY(7px);
+    }
+  }
+
+  svg {
+    fill: #33332e;
+    width: 8px;
+    height: 30px;
+    transition: .5s;
+  }
+}

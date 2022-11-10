@@ -5,6 +5,7 @@
 @import 'core/base';
 
 //elements
+@import 'elements/scroll-down';
 @import 'elements/burger';
 @import 'elements/header-menu';
 @import 'elements/header-services';
@@ -20,6 +21,8 @@
 //section
 @import 'sections/header';
 @import 'sections/index-top';
+@import 'sections/about-sec';
+@import 'sections/why-we-sec';
 @import 'sections/footer';
 
 //pages
