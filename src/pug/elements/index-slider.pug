@@ -1,0 +1,16 @@
+mixin slide(title, footer)
+  .index-slider__slide.swiper-slide
+    .index-slider__slide-title #{title}
+    .index-slider__slide-subtitle We appreciate both great design and quality craftsmanship. Specializing in modern design homes, we love working with our clients to create unique and custom projects.
+    a(href="#").btn.index-slider__slide-btn get free estimate
+    .index-slider__slide-footer #{footer}
+
+//BEGIN index-slider
+#index-slider.index-slider
+  .swiper-wrapper
+    +slide('Baltimore based construction company specializing in residential construction with a high-end finish and attention to detail.', 'Fully licensed by the state to perform roofing work')
+    +slide('Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam aliquid eveniet inventore quod repellat sunt.', 'Fully insured for your protection')
+    +slide('Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto, culpa dolor, nihil nisi quia quisquam sed ut.', 'Proven reputation for providing quality roofing services throughout the community')
+    +slide('Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam aliquid eveniet inventore quod repellat sunt.', 'Committed to ongoing professional training to ensure quality installation')
+  .swiper-pagination
+//END   index-slider

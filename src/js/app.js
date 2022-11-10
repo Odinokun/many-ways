@@ -2,8 +2,8 @@ $(function() {
 
   require('./modules/svg4everybody')();
   require('./modules/menu')();
-
-
+  require('./modules/tabs')();
+  require('./modules/swiper')();
 
   // begin phone mask
   // require('./modules/maskedinput')();

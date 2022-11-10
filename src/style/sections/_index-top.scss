@@ -1,0 +1,39 @@
+.index-top {
+  .container {
+    display: flex;
+    flex-direction: column;
+    padding-top: 50px;
+
+    @include min(769) {
+      flex-direction: row;
+      justify-content: space-between;
+      padding-top: 90px;
+    }
+  }
+}
+
+.index-top__left {
+  position: relative;
+  width: 100%;
+  border-bottom: 1px solid rgba(51, 51, 46, .1);
+
+  @include min(769) {
+    width: calc(75% - 80px);
+    border-bottom: none;
+  }
+  @include min(1400) {
+    width: 50%;
+  }
+}
+
+.index-top__right {
+  width: 100%;
+  padding-top: 30px;
+  padding-bottom: 60px;
+
+  @include min(769) {
+    width: 25%;
+    padding-top: 40px;
+    padding-bottom: 10px;
+  }
+}

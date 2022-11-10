@@ -113,9 +113,17 @@ svg {
 }
 
 .main {
-  flex-grow: 1;
-}
+  padding-top: 66px;
 
+  flex-grow: 1;
+  @include min(680) {
+    padding-top: 80px;
+  }
+}
+.temp {
+  height: 50vh;
+  background-color: #dad55e;
+}
 .container {
   position: relative;
   width: 100%;
