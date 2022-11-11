@@ -1,0 +1,37 @@
+mixin odinokun(pic, name, room)
+  .testimonials-slider__slide.swiper-slide
+    .testimonials-slider__slide-img(style="background-image: url(assets/img/testimonials-" + pic + ".jpg)")
+      .testimonials-slider__slide-footer
+        .testimonials-slider__user
+          .testimonials-slider__user-ava
+            img(src="assets/img/ava-" + pic + ".jpg" alt="avatar")
+          .testimonials-slider__user-info
+            span #{name}
+            span #{room}
+        .testimonials-slider__info
+          span 22 days
+          span 32 sq.m.
+        .testimonials-slider__rating
+          include ../elements/rating
+    .testimonials-slider__slide-blockquote
+      blockquote.blockquote Very glad to have found Sweeten. As first-time homeowners and first-time renovators, it gave us a peace of mind that we would not have otherwise had before signing the contract.
+
+//BEGIN testimonials
+.testimonials
+  .container
+    .testimonials__subtitle People love renovating with us
+    h2.testimonials__title Testimonials
+    //BEGIN testimonials-slider
+    #testimonials-slider.testimonials-slider
+      .swiper-wrapper
+        +odinokun('01', 'Lucy & Ben', 'kitchen')
+        +odinokun('02', 'Jessica', 'bathroom')
+        +odinokun('01', 'Lucy & Ben', 'kitchen')
+        +odinokun('02', 'Jessica', 'bathroom')
+
+      .testimonials-slider__btn.testimonials-slider__btn--prev
+        +svg('arr-left')
+      .testimonials-slider__btn.testimonials-slider__btn--next
+        +svg('arr-right')
+    //END   testimonials-slider
+//END   testimonials
