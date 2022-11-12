@@ -1,6 +1,11 @@
 .footer {
-  padding-top: 40px;
+  position: relative;
+  z-index: 1;
   background-color: #33332e;
+}
+
+.footer-top {
+  padding-top: 40px;
 
   @include min(769) {
     padding-top: 80px;
@@ -8,9 +13,7 @@
   @include min(1200) {
     padding-top: 112px;
   }
-}
 
-.footer-top {
   .container {
     position: relative;
     padding-bottom: 20px;
@@ -222,8 +225,13 @@
   font-weight: 500;
   line-height: 1.2;
   padding: 5px 18px 5px 0;
+  transition: .5s;
   text-decoration: underline;
   color: #868683;
+
+  &:hover {
+    color: $highlight;
+  }
 
   &:last-child {
     padding-right: 0;
@@ -269,7 +277,12 @@
   }
 
   a {
+    transition: .5s;
     color: #868683;
+
+    &:hover {
+      color: $highlight;
+    }
   }
 }
 

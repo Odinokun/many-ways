@@ -1,7 +1,7 @@
 module.exports = function() {
 
   $(function() {
-    $('.scroll-down[href*=\\#]').on("click", function(e){
+    $('.scroll[href*=\\#]').on("click", function(e){
        e.preventDefault();
 
        let anchor = $(this);

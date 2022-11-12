@@ -1,0 +1,39 @@
+.scroll-up {
+  position: sticky;
+  z-index: 1000;
+  top: calc(100vh - 120px);
+  left: calc(100% - 15px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 32px;
+  height: 64px;
+  margin-top: 15px;
+  cursor: pointer;
+  transition: .5s;
+  transform: translateX(-15px);
+  border: 1px solid rgba(255, 255, 255, .1);
+  border-radius: 16px;
+  background-color: #33332e;
+
+  @include min(680) {
+    left: calc(100% - 32px);
+    margin-top: 40px;
+    transform: translateX(-40px);
+  }
+
+  &:hover {
+    border-color: $highlight;
+
+    svg {
+      fill: $highlight;
+    }
+  }
+
+  svg {
+    fill: rgba(255, 255, 255, .1);
+    width: 8px;
+    height: 30px;
+    transition: .5s;
+  }
+}
