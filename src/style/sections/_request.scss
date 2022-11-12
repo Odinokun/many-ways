@@ -52,9 +52,9 @@
   display: flex;
   margin-top: auto;
   margin-bottom: 40px;
-  @include min(680) {
-  margin-bottom: 0;
 
+  @include min(680) {
+    margin-bottom: 0;
   }
 }
 
@@ -113,9 +113,10 @@
 .request-form__row {
   display: flex;
   flex-direction: column;
+
   @include min(680) {
-  justify-content: space-between;
-      flex-direction: row;
+    flex-direction: row;
+    justify-content: space-between;
   }
 }
 
@@ -133,19 +134,19 @@
 .request-form__input {
   width: 100%;
   margin-bottom: 25px;
-  @include min(680) {
 
-  width: calc(50% - 20px);
-  margin-bottom: 30px;
+  @include min(680) {
+    width: calc(50% - 20px);
+    margin-bottom: 30px;
   }
 }
 
 .request-form__textarea {
   width: 100%;
   margin-bottom: 25px;
-  @include min(680) {
-  margin-bottom: 30px;
 
+  @include min(680) {
+    margin-bottom: 30px;
   }
 }
 
