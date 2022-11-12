@@ -5,6 +5,7 @@ $(function() {
   require('./modules/tabs')();
   require('./modules/swiper')();
   require('./modules/scroll2ancor')();
+  require('./modules/input-type-file')();
 
   // begin phone mask
   // require('./modules/maskedinput')();

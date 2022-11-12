@@ -84,27 +84,46 @@ button {
   outline: none;
 }
 
-//input {
-//  padding: 3px 10px 5px 10px;
-//  color: $text;
-//  border: 1px solid $text;
-//
-//  @include placeholder-color($text);
-//}
-//
-textarea {
+.input input {
+  overflow: hidden;
+  width: 100%;
+  padding: 0 0 20px 0;
+  text-overflow: ellipsis;
+  border-top: none;
+  border-right: none;
+  border-bottom: 2px solid #33332e;
+  border-left: none;
+  background-color: transparent;
+
+  @include placeholder-color(#33332e);
+}
+
+.select select {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  padding: 0 0 20px 0;
+  text-indent: 1px;
+  text-overflow: ellipsis;
+  border-top: none;
+  border-right: none;
+  border-bottom: 2px solid #33332e;
+  border-left: none;
+  background-color: transparent;
+
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  @include placeholder-color(#33332e);
+}
+
+.textarea textarea {
+  width: 100%;
+  padding: 20px;
   resize: none;
-}
+  border: 2px solid #33332e;
+  background-color: transparent;
 
-input.error,
-textarea.error {
-  border-color: #ed1b24 !important;
-  background: #fbd1d3 !important;
-}
-
-svg {
-  display: block;
-  overflow: visible;
+  @include placeholder-color(#33332e);
 }
 
 .blockquote {
@@ -118,6 +137,11 @@ svg {
   @include min(769) {
     padding: 0 0 0 57px;
   }
+}
+
+svg {
+  display: block;
+  overflow: visible;
 }
 
 .main-wrap {

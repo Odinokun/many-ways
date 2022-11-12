@@ -1,0 +1,58 @@
+//BEGIN request
+.request
+  .container
+    //BEGIN left
+    .request__left
+      h2.request__title Estimate your project
+      .request__subtitle Fill the form and our manager contact you.
+      .request__user
+        .request__user-ava
+          img(src="assets/img/ava-03.jpg" alt="user")
+        .request__user-info
+          blockquote.request__user-blockquote
+            span We will do our absolute best to get back with your estimate as quickly as possible.
+          .request__user-descr
+            .request__user-name Will Smith
+            | /
+            .request__user-position head of manager
+    //END   left
+
+    //BEGIN right
+    .request__right
+      form.request__form.request-form
+        .request-form__row
+          .request-form__select.select
+            select
+              option(value="") Select type of service
+              option(value="") Service 01
+              option(value="") Service 02
+              option(value="") Service 03
+              option(value="") Service 04
+          .input.request-form__input
+            input(placeholder="Square of area")
+        .request-form__row
+          .textarea.request-form__textarea
+            textarea(placeholder="Describe your project")
+
+        .request-form__row
+          .request-form__file-input
+            input(type="file")
+            span.request-form__file-input-placeholder Upload pictures of your area (.JPG / .PNG / Max size 10 mb)
+            span.request-form__file-input-filename
+
+        h3.request-form__title your contacts
+
+        .request-form__row
+          .input.request-form__input
+            input(placeholder="First name")
+          .input.request-form__input
+            input(placeholder="Last name")
+        .request-form__row
+          .input.request-form__input
+            input(placeholder="Phone")
+          .input.request-form__input
+            input(placeholder="Email")
+        .request-form__row
+          button.btn.request-form__btn send request
+    //END   right
+//END   request
