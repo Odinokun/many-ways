@@ -19,7 +19,9 @@
       //BEGIN right
       .header-menu__right
         .header-menu__info
-          a(href="https://goo.gl/maps/fudd7QjeS9LMboK9A" target="_blank" rel="nofollow noopener noreferrer").header-menu__address 2008 Maryland Ave, Baltimore, MD 21218, USA
+          a(href="https://goo.gl/maps/fudd7QjeS9LMboK9A" target="_blank" rel="nofollow noopener noreferrer").header-menu__address
+            span 2008 Maryland Ave, Baltimore, MD 21218, USA
+            +svg('copy')
           a(href="tel:+18008889999").header-menu__phone 1-800-888-9999
           a(href="mailto:hello@manyways.com").header-menu__mail hello@manyways.com
           .header-menu__social
@@ -30,4 +32,3 @@
             a(href="#" target="_blank" rel="nofollow noopener noreferrer").header-menu__social-link
               +svg('fb')
       //END   right
-//END   header__menu

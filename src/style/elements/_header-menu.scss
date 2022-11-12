@@ -87,10 +87,15 @@
   font-weight: 600;
   line-height: 1.1;
   user-select: none;
+  transition: .5s;
   text-decoration: none;
   color: #fff;
 
   @include responsive-font(72, 30);
+
+  &:hover {
+    color: $highlight;
+  }
 }
 
 .header-menu__right {
@@ -108,6 +113,9 @@
 }
 
 .header-menu__info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
   width: 100%;
 
   @include min(680) {
@@ -119,10 +127,29 @@
 .header-menu__address {
   font-size: 16px;
   line-height: 1.3;
-  display: block;
+  display: inline-flex;
   margin-bottom: 18px;
+  transition: .5s;
   text-decoration: none;
   color: #fff;
+
+  &:hover {
+    color: $highlight;
+
+    svg {
+      fill: $highlight;
+    }
+  }
+
+  svg {
+    flex: none;
+    fill: #fff;
+    width: 16px;
+    height: 16px;
+    margin-left: 5px;
+    transition: .5s;
+    transform: translateY(2px);
+  }
 }
 
 .header-menu__phone,
@@ -130,10 +157,15 @@
   font-weight: 500;
   line-height: 1.3;
   display: block;
+  transition: .5s;
   text-decoration: none;
   color: #fff;
 
   @include responsive-font(20, 16);
+
+  &:hover {
+    color: $highlight;
+  }
 }
 
 .header-menu__social {
@@ -156,12 +188,22 @@
   width: 48px;
   height: 48px;
   margin-right: 10px;
+  transition: .5s;
   border: 1px solid rgba(255, 255, 255, .1);
   border-radius: 50%;
+
+  &:hover {
+    border-color: $highlight;
+
+    svg {
+      fill: $highlight;
+    }
+  }
 
   svg {
     fill: #fff;
     width: 16px;
     height: 16px;
+    transition: .5s;
   }
 }
