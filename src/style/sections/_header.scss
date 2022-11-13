@@ -55,10 +55,20 @@
     padding: 5px 28px;
   }
 
+  &:hover {
+    color: $highlight;
+    border-color: $highlight;
+
+    svg {
+      fill: $highlight;
+    }
+  }
+
   svg {
     fill: $dark;
     width: 12px;
     height: 12px;
+    transition: .5s;
 
     @include min(680) {
       display: none;
@@ -84,6 +94,16 @@
   @include min(680) {
     padding-right: 30px;
     padding-left: 20px;
+  }
+
+  &:hover {
+    color: #fff;
+    border-color: #fff;
+    background-color: $highlight;
+
+    svg {
+      fill: #fff;
+    }
   }
 
   svg {
@@ -116,6 +136,11 @@
     width: 42px;
     height: 42px;
   }
+
+  &:hover {
+    border-color: $highlight;
+    background-color: $highlight;
+  }
 }
 
 
@@ -137,6 +162,7 @@
     opacity: .1;
     color: #fff;
     border-color: #fff;
+
 
     svg {
       fill: #fff;

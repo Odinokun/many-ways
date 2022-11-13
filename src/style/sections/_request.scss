@@ -159,60 +159,129 @@
 .request-form__select,
 .request-form__input {
   width: 100%;
-  margin-bottom: 25px;
+  margin-bottom: 30px;
 
   @include min(680) {
     width: calc(50% - 20px);
-    margin-bottom: 30px;
+    margin-bottom: 35px;
   }
 }
 
 .request-form__textarea {
   width: 100%;
-  margin-bottom: 25px;
+  margin-bottom: 30px;
 
   @include min(680) {
-    margin-bottom: 30px;
+    margin-bottom: 35px;
+  }
+}
+
+/* begin TYPE FILE */
+.request-form__file-input-wrap {
+  position: relative;
+  width: 100%;
+  margin-bottom: 40px;
+
+  &::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 70px;
+    content: '';
+    pointer-events: none;
+    border: 1px dashed #33332e;
   }
 }
 
 .request-form__file-input {
+  display: block;
+  width: 100%;
+  height: 70px;
+  opacity: 0;
+  background-color: #dad55e;
+}
+
+.MultiFile-wrap {
+  width: 100%;
+}
+
+.MultiFile-list {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-top: 20px;
+}
+
+.MultiFile-label {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 3px;
+  padding-right: 15px;
+}
+
+.MultiFile-remove {
+  position: absolute;
+  top: 2px;
+  right: 0;
+  display: block;
+  width: 20px;
+  height: 20px;
+  color: transparent;
+  background-image: url('../img/del.svg');
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: contain;
+
+  &:hover {
+    background-image: url('../img/del-hov.svg');
+
+    & + span .MultiFile-title {
+      color: $highlight;
+    }
+  }
+}
+
+.MultiFile-title {
   font-size: 16px;
   font-weight: 500;
   line-height: 1.3;
-  position: relative;
+  user-select: none;
+  transition: .25s;
+  color: #33332e;
+}
+
+.request-form__file-input-placeholder {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.3;
+  position: absolute;
+  top: 0;
+  left: 0;
   display: flex;
-  overflow: hidden;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   width: 100%;
-  min-height: 70px;
-  margin-bottom: 40px;
-  padding: 20px;
+  height: 70px;
+  padding: 5px 20px;
   text-align: center;
-  text-overflow: ellipsis;
+  pointer-events: none;
   color: #33332e;
-  border: 1px dashed #33332e;
-
-  input {
-    position: absolute;
-    z-index: 5;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    display: block;
-    margin: auto;
-    opacity: 0;
-  }
 }
+
+/* end   TYPE FILE */
 
 
 .request-form__btn {
   margin-left: auto;
   color: $highlight;
   border-color: $highlight;
+
+  &:hover {
+    color: #fff;
+    background-color: $highlight;
+  }
 }
 
 /* end   FORM */

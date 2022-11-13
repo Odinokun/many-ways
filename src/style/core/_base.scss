@@ -77,6 +77,11 @@ ul {
 //}
 
 input,
+select {
+  border-top: 2px solid transparent !important;
+}
+
+input,
 textarea,
 select,
 button {
@@ -84,46 +89,121 @@ button {
   outline: none;
 }
 
-.input input {
-  overflow: hidden;
-  width: 100%;
-  padding: 0 0 20px 0;
-  text-overflow: ellipsis;
-  border-top: none;
-  border-right: none;
-  border-bottom: 2px solid #33332e;
-  border-left: none;
-  background-color: transparent;
+.input,
+.textarea,
+.select {
+  position: relative;
 
-  @include placeholder-color(#33332e);
+  input,
+  textarea,
+  select {
+    overflow: hidden;
+    width: 100%;
+    padding: 0 0 20px 0;
+    transition: .5s;
+    text-overflow: ellipsis;
+    border-top: none;
+    border-right: none;
+    border-bottom: 2px solid #33332e;
+    border-left: none;
+    background-color: transparent;
+
+    @include placeholder-color(#33332e);
+
+    & + span {
+      top: 0;
+      display: block;
+      color: #33332e;
+    }
+
+    & + span + span {
+      top: calc(100% + 5px);
+      display: block;
+      color: #ea5050;
+    }
+  }
+
+  span {
+    font-size: 10px;
+    font-weight: 500;
+    line-height: 1.2;
+    position: absolute;
+    left: 0;
+    display: none;
+    transition: .5s;
+    opacity: 0;
+  }
 }
 
-.select select {
-  position: relative;
-  overflow: hidden;
-  width: 100%;
-  padding: 0 0 20px 0;
-  text-indent: 1px;
-  text-overflow: ellipsis;
-  border-top: none;
-  border-right: none;
-  border-bottom: 2px solid #33332e;
-  border-left: none;
-  background-color: transparent;
+.textarea {
+  textarea {
+    & + span {
+      top: 7px;
+      left: 20px;
+    }
 
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  @include placeholder-color(#33332e);
+    & + span + span {
+      top: 100%;
+    }
+  }
+}
+
+.input.active input,
+.select.active select {
+  padding-top: 15px;
+  padding-bottom: 5px;
+
+  & + span {
+    opacity: 1;
+  }
+}
+
+.textarea.active textarea {
+  & + span {
+    opacity: 1;
+  }
+}
+
+.input.error input,
+.select.error select,
+.textarea.error textarea {
+  border-color: #ea5050;
+
+  @include placeholder-color(#ea5050);
+
+  & + span + span {
+    opacity: 1;
+  }
+}
+
+.select.error select {
+  color: #ea5050;
+}
+
+.select {
+  &::before {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    bottom: 0;
+    margin: auto;
+    content: '';
+    pointer-events: none;
+    border-top: 8px solid $highlight;
+    border-right: 5px solid transparent;
+    border-left: 5px solid transparent;
+  }
+
+  select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+  }
 }
 
 .textarea textarea {
-  width: 100%;
   padding: 20px;
   resize: none;
   border: 2px solid #33332e;
-  background-color: transparent;
-
-  @include placeholder-color(#33332e);
 }
 
 .blockquote {
@@ -184,6 +264,7 @@ svg {
   padding: 5px 28px;
   cursor: pointer;
   user-select: none;
+  transition: .5s;
   white-space: nowrap;
   text-decoration: none;
   text-transform: uppercase;

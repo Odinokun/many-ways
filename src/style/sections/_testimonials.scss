@@ -189,6 +189,7 @@
   width: 64px;
   height: 32px;
   cursor: pointer;
+  transition: .5s;
   transform: translateY(70px);
   border: 1px solid #33332e;
   border-radius: 16px;
@@ -196,6 +197,15 @@
 
   @include min(769) {
     transform: translateY(92px);
+  }
+
+  &:hover {
+    border-color: $highlight;
+    background-color: $highlight;
+
+    svg {
+      fill: #fff;
+    }
   }
 
   svg {
@@ -208,22 +218,10 @@
 
 .testimonials-slider__btn--prev {
   right: 114px;
-
-  &:hover {
-    svg {
-      transform: translateX(-5px);
-    }
-  }
 }
 
 .testimonials-slider__btn--next {
   right: 40px;
-
-  &:hover {
-    svg {
-      transform: translateX(5px);
-    }
-  }
 }
 
 /* end   BTNS */

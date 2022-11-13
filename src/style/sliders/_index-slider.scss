@@ -54,9 +54,15 @@
   margin-bottom: 90px;
   color: $highlight;
   border-color: $highlight;
+  background-color: transparent;
 
   @include min(769) {
     margin-bottom: 110px;
+  }
+
+  &:hover {
+    color: #fff;
+    background-color: $highlight;
   }
 }
 

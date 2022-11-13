@@ -24,34 +24,49 @@
           .request-form__select.select
             select
               option(value="") Select type of service
-              option(value="") Service 01
-              option(value="") Service 02
-              option(value="") Service 03
-              option(value="") Service 04
-          .input.request-form__input
+              option(value="Kitchen") Kitchen
+              option(value="Bathroom") Bathroom
+              option(value="Flooring") Flooring
+              option(value="Deck") Deck
+              option(value="Basement") Basement
+              option(value="Roofing") Roofing
+            span Select type of service
+            span Type the correct information
+          .input.request-form__input.error
             input(placeholder="Square of area")
+            span Square of area
+            span Type the correct information
         .request-form__row
           .textarea.request-form__textarea
             textarea(placeholder="Describe your project")
+            span Describe your project
+            span Type the correct information
 
         .request-form__row
-          .request-form__file-input
-            input(type="file")
+          .request-form__file-input-wrap
+            input(type="file" class="multi request-form__file-input" maxlength="100")
             span.request-form__file-input-placeholder Upload pictures of your area (.JPG / .PNG / Max size 10 mb)
-            span.request-form__file-input-filename
 
         h3.request-form__title your contacts
 
         .request-form__row
           .input.request-form__input
             input(placeholder="First name")
+            span First name
+            span Type the correct information
           .input.request-form__input
             input(placeholder="Last name")
+            span Last name
+            span Type the correct information
         .request-form__row
           .input.request-form__input
             input(placeholder="Phone")
+            span Phone
+            span Type the correct information
           .input.request-form__input
             input(placeholder="Email")
+            span Email
+            span Type the correct information
         .request-form__row
           button.btn.request-form__btn send request
     //END   right
