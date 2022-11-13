@@ -1,0 +1,75 @@
+extends ../_template
+
+block variables
+  - let title       = 'Many Ways'
+  - let description = 'Many Ways'
+  - let breadcrumbs = 'Services'
+
+mixin sItem(icon, title)
+  li.services-catalog__item
+    a(href="#").services-catalog__link
+      .services-catalog__icon
+        svg
+          use(xlink:href="assets/img/sprite.svg#" + icon)
+      .services-catalog__title #{title}
+      .services-catalog__arr
+        +svg('arr-service')
+
+block content
+  #main-wrap.main-wrap
+    include ../sections/header
+
+    //begin content
+    main.main
+      include ../elements/breadcrumbs
+
+      //BEGIN services-top
+      .services-top
+        .container
+          h2.services-top__title.title Our services
+          .services-top__double
+            .services-top__double-item
+              p When building a custom home, you can decide almost all the details in your home and you can even work closely with our team to design a floor plan that works for you. This way you can take advantage of the views you wish to create for your dream home. Additions - Many Mays Construction offers superior service when looking to add on to a home. Whether you are looking for more space in a master bedroom or want to add more rooms and baths. There is no job we can’t build with your budget and needs in mind.
+            .services-top__double-item
+              blockquote.blockquote Remodels - At Many Mays Construction, we strive to offer our services with as little disruption as possible and schedule the job precisely to make sure of no lag time and complete the job as fast as possible. Whether you chose to live in the house during remodeling or not, we make it a priority to be conscious of the safety of you and your children and at the end of the day provide a safe and clean space throughout the remodeling period.
+      //END   services-top
+
+      //BEGIN services-before-after
+      .services-before-after
+        a(href="#services-catalog").scroll-down.scroll
+          +svg('arr-down')
+        .container
+          .services-before-after__left
+            h2.before-after__title Custom Homes
+          .services-before-after__right
+            .before-after__descr
+        #before-after.before-after
+          img(src="assets/img/bg-services-before.jpg" alt="img")
+          img(src="assets/img/bg-services-after.jpg" alt="img")
+        .container
+          .services-before-after__left
+            h2.before-after__title
+          .services-before-after__right
+            .before-after__descr we can work from your own plans or work with an architect to design a home from start to finish.
+      //END   services-before-after
+
+      //BEGIN services-catalog
+      #services-catalog.services-catalog
+        .container
+          h2.services-catalog__top-title Choose service what you need
+
+        //BEGIN services-catalog__list
+        ul.services-catalog__list
+          +sItem('kitchen', 'Kitchen')
+          +sItem('bath', 'Bathroom')
+          +sItem('floor', 'Flooring')
+          +sItem('deck', 'Deck')
+          +sItem('basement', 'Basement')
+          +sItem('roof', 'Roofing')
+        //END   services-catalog__list
+      //END   services-catalog
+    //end content
+
+    include ../sections/footer
+    include ../elements/popup
+    include ../sections/scripts

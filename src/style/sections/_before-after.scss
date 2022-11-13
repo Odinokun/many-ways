@@ -1,0 +1,97 @@
+.services-before-after {
+  position: relative;
+
+  .container {
+    @include min(1025) {
+      position: absolute;
+      z-index: 1;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      padding-top: 40px;
+      padding-bottom: 40px;
+      pointer-events: none;
+    }
+  }
+}
+
+.services-before-after__left,
+.services-before-after__right {
+  width: 100%;
+
+  @include min(1025) {
+    width: calc(50% - 20px);
+  }
+}
+
+.services-before-after__right {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+
+  @include min(1025) {
+    justify-content: flex-end;
+  }
+}
+
+
+.before-after {
+  background-color: #396;
+
+  img {
+    display: block;
+    width: 100%;
+  }
+
+  .twentytwenty-overlay {
+    display: none !important;
+  }
+
+  .twentytwenty-handle {
+    width: 44px;
+    height: 44px;
+    background-color: #fff;
+    background-image: url('../img/double-arr.svg');
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: 21px 7px;
+
+    span {
+      display: none !important;
+    }
+  }
+}
+
+.before-after__title {
+  font-family: $font-title;
+  font-weight: 600;
+  font-style: normal;
+  line-height: .9;
+  margin-bottom: 30px;
+  padding-top: 20px;
+  color: #33332e;
+
+  @include responsive-font(90, 50);
+  @include min(1025) {
+    max-width: 630px;
+    margin-bottom: 0;
+    color: #fff;
+  }
+}
+
+.before-after__descr {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.2;
+  text-transform: uppercase;
+  color: $highlight;
+
+  @include min(1025) {
+    max-width: 370px;
+    margin-left: auto;
+    color: #fff;
+  }
+}

@@ -12,7 +12,7 @@
 @import 'elements/header-services';
 @import 'elements/index-tabs';
 @import 'elements/rating';
-//@import 'elements/breadcrumbs';
+@import 'elements/breadcrumbs';
 //@import 'elements/pagination';
 @import 'elements/popup';
 
@@ -29,7 +29,10 @@
 @import 'sections/testimonials';
 @import 'sections/request';
 @import 'sections/links';
+@import 'sections/before-after';
+@import 'sections/services-catalog';
 @import 'sections/footer';
 
 //pages
 @import 'pages/index';
+@import 'pages/services';

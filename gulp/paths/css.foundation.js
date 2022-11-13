@@ -3,6 +3,7 @@
 module.exports = [
   './node_modules/normalize.css/normalize.css',
   './node_modules/swiper/swiper-bundle.css',
+  './src/vendors/twentytwenty-master/css/twentytwenty.css'
 
   // include jQuery UI
   // './src/vendors/jquery-ui/jquery-ui.min.css',

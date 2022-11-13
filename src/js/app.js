@@ -6,6 +6,7 @@ $(function() {
   require('./modules/swiper')();
   require('./modules/scroll2ancor')();
   require('./modules/input-placeholder')();
+  require('./modules/before-after')();
 
   // begin phone mask
   // require('./modules/maskedinput')();

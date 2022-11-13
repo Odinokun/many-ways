@@ -1,0 +1,22 @@
+.services-top {
+  padding-top: 60px;
+}
+
+.services-top__double {
+  display: flex;
+  flex-direction: column;
+
+  @include min(1025) {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+.services-top__double-item {
+  width: 100%;
+  padding-bottom: 40px;
+
+  @include min(1025) {
+    width: calc(50% - 20px);
+  }
+}

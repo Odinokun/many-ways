@@ -274,3 +274,13 @@ svg {
   background-color: transparent;
   box-shadow: none;
 }
+
+.title {
+  font-family: $font-title;
+  font-weight: 600;
+  line-height: 1.2;
+  margin-bottom: 40px;
+  color: #33332e;
+
+  @include responsive-font(44, 30);
+}
