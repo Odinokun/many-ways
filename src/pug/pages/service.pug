@@ -1,0 +1,88 @@
+extends ../_template
+
+block variables
+  - let title       = 'Many Ways'
+  - let description = 'Many Ways'
+  - let breadcrumbs = 'Flooring service'
+
+block content
+  #main-wrap.main-wrap
+    include ../sections/header
+
+    //begin content
+    main.main
+      include ../elements/breadcrumbs-service
+
+      //BEGIN service-top
+      .service-top
+        .container
+          h2.sevice-top__title.title Flooring service
+          .service-top__text Flooring - from sanding, finishing and resurfacing, to full replacements and upgrades, we do it all. Is your floor damaged from water, pets, or simply worn down from age? Are you renovating or remodeling? Is it time for a new look?
+      //END   service-top
+
+      .service-items
+        //BEGIN service-item
+        .service-item
+          .container
+            //BEGIN header
+            .service-item__header
+              h3.service-item__title Hardwood floor installation
+              .service-item__text Hardwood floors are an especially popular option and for good reason. Hardwood comes in a broad range of styles, grains, and types. The wood floor has its own benefits besides the fact that it looks great. No matter if you’re going to a traditionally classic and timeless look or a more exotic pattern, we can help you find the perfect fit for your style and budget.
+              button.btn.service-item__btn send request
+            //END   header
+
+            .service-item__body
+              .service-item__img-lg
+                img(src="assets/img/service/service-lg-01.jpg" alt="image")
+              .service-item__body-images
+                .service-item__img-sm
+                .service-item__img-sm
+                  img(src="assets/img/service/service-01.jpg" alt="image")
+        //END   service-item
+
+        //BEGIN service-item
+        .service-item
+          .container
+            //BEGIN header
+            .service-item__header
+              h3.service-item__title Laminated floor installation
+              .service-item__text Laminate is also a popular flooring option, but for different reasons than hardwood. Laminate also comes in a broad spectrum of styles and design patterns, offering more color and personalization while also being highly affordable.
+              button.btn.service-item__btn send request
+            //END   header
+
+            .service-item__body
+              .service-item__img-lg
+                img(src="assets/img/service/service-lg-02.jpg" alt="image")
+              .service-item__body-images
+                .service-item__img-sm
+                  img(src="assets/img/service/service-02.jpg" alt="image")
+                .service-item__img-sm
+                  img(src="assets/img/service/service-03.jpg" alt="image")
+        //END   service-item
+
+        //BEGIN service-item
+        .service-item
+          .container
+            //BEGIN header
+            .service-item__header
+              h3.service-item__title Tile installation
+              .service-item__text For durability and permanence, porcelain tile has no rival. The look and design possibilities of ceramic tiles are endless.
+              button.btn.service-item__btn send request
+            //END   header
+
+            .service-item__body
+              .service-item__img-lg
+                img(src="assets/img/service/service-lg-03.jpg" alt="image")
+              .service-item__body-images
+                .service-item__img-sm
+                .service-item__img-sm
+                  img(src="assets/img/service/service-04.jpg" alt="image")
+        //END   service-item
+
+      include ../sections/request
+      include ../sections/links-sec
+    //end content
+
+    include ../sections/footer
+    include ../elements/popup
+    include ../sections/scripts
