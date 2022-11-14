@@ -1,0 +1,49 @@
+extends ../_template
+
+block variables
+  - let title       = 'Many Ways'
+  - let description = 'Many Ways'
+  - let breadcrumbs = 'About'
+
+block content
+  #main-wrap.main-wrap
+    include ../sections/header
+
+    //begin content
+    main.main
+      include ../elements/breadcrumbs
+
+      //BEGIN about-top
+      .about-top
+        .container
+          h2.about-top__title.title Many Mays – construction company based in Baltimore. Our specializing – residential construction with a high-end finish and attention to detail.
+      //END   about-top
+
+      //BEGIN about-top-descr
+      .about-top-descr
+        .container
+          //BEGIN left
+          .about-top-descr__left
+            .about-top-descr__left-img
+              img(src="assets/img/about-top.jpg" alt="image")
+              .about-top-descr__left-img-text If you're not happy we're not done!
+            .about-top-descr__left-subtitle We restore old houses and sometimes we do the seemingly impossible. Our goal – our policies and prices, clear and fair.
+          //END   left
+
+          //BEGIN right
+          .about-top-descr__right
+            .about-top-descr__right-text
+              strong We appreciate both great design and quality craftsmanship. Specializing in modern design homes, we love working with our clients to create unique and custom projects. The versatility that we offer in terms of flexibility and speed of construction is why we love servicing our clients and building with this style.
+            .about-top-descr__right-text With Baltimore’s changing seasons, it is always important to consider strategic design and what construction materials can be used to improve this further. We always look to utilize the latest products for our clients that are both cost effective and efficient.
+            .about-top-descr__right-text If somebody offer’s you to do the works cheaper - do not forget to put in the estimate twice as many hidden defects and overhead costs that could be discovered after the advance payment, which those companies forgot to notify you about, or get ready for the mediocre quality of materials.
+          //END   right
+      //END   about-top-descr
+
+      include ../sections/steps
+      include ../sections/result
+      include ../sections/links-sec
+    //end content
+
+    include ../sections/footer
+    include ../elements/popup
+    include ../sections/scripts

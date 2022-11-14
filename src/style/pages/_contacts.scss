@@ -25,14 +25,15 @@
   width: 100%;
   margin-bottom: 20px;
   @include min(1025) {
-  width: 33.33%;
+    width: 33.33%;
 
   }
   @include min(1200) {
-  width: 25%;
+    width: 25%;
     margin-bottom: 0;
 
   }
+
   &:hover {
     text-decoration: underline;
   }
@@ -91,9 +92,9 @@
   position: relative;
   width: 100%;
   @include min(1200) {
-  position: absolute;
-  top: -28px;
-  left: 0;
+    position: absolute;
+    top: -28px;
+    left: 0;
 
   }
 }
@@ -107,18 +108,20 @@
   height: 48px;
   margin-right: 16px;
   border: 1px solid rgba(51, 51, 46, .1);
- transition: .5s;
+  transition: .5s;
   border-radius: 50%;
+
   &:hover {
     border-color: $highlight;
+
     svg {
 
-    fill: $highlight;
+      fill: $highlight;
     }
   }
 
   svg {
- transition: .5s;
+    transition: .5s;
     fill: #51514e;
     width: 20px;
     height: 20px;

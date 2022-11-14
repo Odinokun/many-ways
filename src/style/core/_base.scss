@@ -66,15 +66,22 @@ ul {
 //    // list-style-image: url('../img/ul.png');
 //  }
 //}
-//
-////кастомные пункты списка с цифрами
-//ol {
-//  // list-style: none;
-//  // @include counter(li);
-//  li::before {
-//    // color: $brand;
-//  }
-//}
+
+//кастомные пункты списка с цифрами
+ol {
+  @include counter(li);
+
+  li::before {
+    padding-right: 8px;
+
+    @include min(769) {
+      padding-right: 20px;
+    }
+    @include min(1200) {
+      padding-right: 65px;
+    }
+  }
+}
 
 input,
 select {

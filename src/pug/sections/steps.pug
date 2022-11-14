@@ -1,0 +1,27 @@
+mixin step(text)
+  li.steps__item
+    span #{text}
+
+//BEGIN steps
+.steps
+  .container
+    //BEGIN left
+    .steps__left
+      h2.steps__title Stages of work
+      .steps__subtitle Work on each project consists of 9 steps:
+    //END   left
+
+    //BEGIN right
+    .steps__right
+      ol.steps__list
+        +step("Clarification of the customer's needs and wishes, measurement of a site")
+        +step('Preliminary design')
+        +step('Preparation of needed documentation')
+        +step('Calculating the construction costs in relation to the conditions and prices of the region')
+        +step('Conclusion of a contract for the provision of services')
+        +step('Delivery of building materials and equipment to the site, preparation of the construction site')
+        +step('Construction works, according to the customer signed contract')
+        +step('Finishing works')
+        +step('Object commissioning, necessary paper work')
+    //END   right
+//END   steps

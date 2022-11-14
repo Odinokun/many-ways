@@ -1,0 +1,118 @@
+.about-top {
+  padding-top: 40px;
+  padding-bottom: 40px;
+
+  @include min(680) {
+    padding-top: 60px;
+    padding-bottom: 80px;
+  }
+  @include min(1025) {
+    padding-top: 80px;
+    padding-bottom: 120px;
+  }
+}
+
+.about-top-descr {
+  .container {
+    @include min(1025) {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+}
+
+.about-top-descr__left {
+  width: 100%;
+  max-width: 370px;
+
+  @include min(1025) {
+    width: calc(33.33% - 20px);
+  }
+  @include min(1200) {
+    width: calc(25% - 20px);
+  }
+}
+
+.about-top-descr__right {
+  width: 100%;
+
+  @include min(1025) {
+    width: calc(66.66% - 10px);
+  }
+  @include min(1200) {
+    width: calc(50% - 20px);
+  }
+}
+
+.about-top-descr__left-img {
+  position: relative;
+  margin-bottom: 20px;
+
+  img {
+    display: block;
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    object-position: center;
+  }
+
+  &::before {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 35%;
+    content: '';
+    opacity: .5;
+    background-image: linear-gradient(180deg, rgba(51, 51, 46, 0) 0%, #33332e 100%);
+  }
+}
+
+.about-top-descr__left-img-text {
+  font-family: 'Inter';
+  font-size: 16px;
+  font-weight: 600;
+  font-style: normal;
+  line-height: 120%;
+  /* or 19px */
+  position: absolute;
+  right: 0;
+  bottom: 15px;
+  left: 0;
+  width: calc(100% - 30px);
+  margin: auto;
+  text-align: center;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+.about-top-descr__left-subtitle {
+  font-family: $font;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.3;
+  margin-bottom: 40px;
+  color: #33332e;
+}
+
+
+.about-top-descr__right-text {
+  font-family: $font;
+  font-size: 18px;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 1.3;
+  margin-bottom: 60px;
+  color: #33332e;
+
+  strong {
+    font-family: $font-title;
+    font-weight: 600;
+    font-style: normal;
+    line-height: 1.3;
+    color: #33332e;
+
+    @include responsive-font(24, 18);
+  }
+}
