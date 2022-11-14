@@ -26,7 +26,6 @@
 
   &:last-child {
     .breadcrumbs__link {
-      //      text-decoration: none;
       pointer-events: none;
     }
 
@@ -62,3 +61,33 @@
     stroke: #51514e;
   }
 }
+
+/* begin DARK BACKGROUND */
+.main-wrap--dark {
+  @include min(680) {
+    .breadcrumbs {
+      position: relative;
+      z-index: 15;
+    }
+
+    .breadcrumbs__item:after {
+      background-color: rgba(255, 255, 255, .25);
+    }
+
+    .breadcrumbs__link {
+      color: #fff;
+
+      &:hover {
+        svg {
+          stroke: $highlight;
+        }
+      }
+
+      svg {
+        stroke: #fff;
+      }
+    }
+  }
+}
+
+/* end   DARK BACKGROUND */

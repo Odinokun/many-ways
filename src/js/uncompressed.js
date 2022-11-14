@@ -8,6 +8,7 @@ $(document).ready(function ($) {
     'service',
     'contacts',
     'about',
+    'portfolio',
     ]);
 });
 

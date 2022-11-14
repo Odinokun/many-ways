@@ -1,0 +1,110 @@
+extends ../_template
+
+block variables
+  - let title       = 'Many Ways'
+  - let description = 'Many Ways'
+  - let breadcrumbs = 'portfolio'
+
+mixin slidePortfolio(pic, text)
+  .portfolio-slider__slide.swiper-slide
+    .portfolio-slider__slide-img
+      img(src="assets/img/portfolio/slide-" + pic + ".jpg" alt="slide")
+    .portfolio-slider__slide-text #{text}
+
+mixin slidePortfolioThumb(pic)
+  .portfolio-slider-thumb__slide.swiper-slide
+    .portfolio-slider-thumb__slide-img
+      img(src="assets/img/portfolio/thumb-" + pic + ".jpg" alt="slide")
+
+block content
+  #main-wrap.main-wrap.main-wrap--dark
+    include ../sections/header
+
+    //begin content
+    main.main
+      include ../elements/breadcrumbs
+
+      //BEGIN portfolio
+      .portfolio
+        include ../elements/filter
+        #portfolio-slider.portfolio-slider
+          .swiper-wrapper
+            +slidePortfolio('03', 'Modern bathroom in scandinavian style')
+            +slidePortfolio('01', 'Lorem ipsum dolor sit amet')
+            +slidePortfolio('02', 'Temporibus tenetur veniam voluptatem voluptates')
+            +slidePortfolio('04', 'Accusantium aperiam at atque blanditiis')
+            +slidePortfolio('05', 'Magnam maiores nemo nihil nisi reprehenderit')
+            +slidePortfolio('01', 'Modern bathroom in scandinavian style')
+            +slidePortfolio('02', 'Temporibus tenetur veniam voluptatem voluptates')
+            +slidePortfolio('03', 'Lorem ipsum dolor sit amet')
+            +slidePortfolio('04', 'Accusantium aperiam at atque blanditiis')
+            +slidePortfolio('05', 'Magnam maiores nemo nihil nisi reprehenderit')
+            +slidePortfolio('01', 'Modern bathroom in scandinavian style')
+            +slidePortfolio('02', 'Temporibus tenetur veniam voluptatem voluptates')
+            +slidePortfolio('03', 'Lorem ipsum dolor sit amet')
+            +slidePortfolio('04', 'Accusantium aperiam at atque blanditiis')
+            +slidePortfolio('05', 'Magnam maiores nemo nihil nisi reprehenderit')
+            +slidePortfolio('03', 'Lorem ipsum dolor sit amet')
+            //-
+            +slidePortfolio('01', 'Modern bathroom in scandinavian style')
+            +slidePortfolio('02', 'Temporibus tenetur veniam voluptatem voluptates')
+            +slidePortfolio('03', 'Lorem ipsum dolor sit amet')
+            +slidePortfolio('04', 'Accusantium aperiam at atque blanditiis')
+            +slidePortfolio('05', 'Magnam maiores nemo nihil nisi reprehenderit')
+            +slidePortfolio('01', 'Modern bathroom in scandinavian style')
+            +slidePortfolio('02', 'Temporibus tenetur veniam voluptatem voluptates')
+            +slidePortfolio('03', 'Lorem ipsum dolor sit amet')
+            +slidePortfolio('04', 'Accusantium aperiam at atque blanditiis')
+            +slidePortfolio('05', 'Magnam maiores nemo nihil nisi reprehenderit')
+            +slidePortfolio('01', 'Modern bathroom in scandinavian style')
+            +slidePortfolio('02', 'Temporibus tenetur veniam voluptatem voluptates')
+            +slidePortfolio('03', 'Lorem ipsum dolor sit amet')
+            +slidePortfolio('04', 'Accusantium aperiam at atque blanditiis')
+            +slidePortfolio('05', 'Magnam maiores nemo nihil nisi reprehenderit')
+            +slidePortfolio('03', 'Lorem ipsum dolor sit amet')
+          .portfolio-slider__btn.portfolio-slider__btn--prev
+            +svg('arr-left')
+          .portfolio-slider__btn.portfolio-slider__btn--next
+            +svg('arr-right')
+
+        .portfolio-slider-thumb-wrap
+          #portfolio-slider-thumb.portfolio-slider-thumb
+            .swiper-wrapper
+              +slidePortfolioThumb('01')
+              +slidePortfolioThumb('02')
+              +slidePortfolioThumb('03')
+              +slidePortfolioThumb('04')
+              +slidePortfolioThumb('05')
+              +slidePortfolioThumb('06')
+              +slidePortfolioThumb('07')
+              +slidePortfolioThumb('08')
+              +slidePortfolioThumb('09')
+              +slidePortfolioThumb('10')
+              +slidePortfolioThumb('11')
+              +slidePortfolioThumb('12')
+              +slidePortfolioThumb('13')
+              +slidePortfolioThumb('14')
+              +slidePortfolioThumb('15')
+              +slidePortfolioThumb('16')
+              //-
+              +slidePortfolioThumb('01')
+              +slidePortfolioThumb('02')
+              +slidePortfolioThumb('03')
+              +slidePortfolioThumb('04')
+              +slidePortfolioThumb('05')
+              +slidePortfolioThumb('06')
+              +slidePortfolioThumb('07')
+              +slidePortfolioThumb('08')
+              +slidePortfolioThumb('09')
+              +slidePortfolioThumb('10')
+              +slidePortfolioThumb('11')
+              +slidePortfolioThumb('12')
+              +slidePortfolioThumb('13')
+              +slidePortfolioThumb('14')
+              +slidePortfolioThumb('15')
+              +slidePortfolioThumb('16')
+      //END   portfolio
+    //end content
+
+    include ../elements/popup
+    include ../sections/scripts

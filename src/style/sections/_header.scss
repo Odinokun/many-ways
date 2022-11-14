@@ -88,6 +88,7 @@
   margin-left: 10px;
   padding-right: 12px;
   padding-left: 12px;
+  transition: .5s;
   color: #fff;
   background-color: $dark;
 
@@ -116,6 +117,7 @@
       width: 12px;
       height: 12px;
       margin-right: 12px;
+      transition: .5s;
     }
     @include min(680) {
       margin-right: 20px;
@@ -198,8 +200,13 @@
   .btn__services.active {
     pointer-events: auto;
     opacity: 1;
+    color: #fff;
     border-color: $highlight;
     background-color: $highlight;
+
+    svg {
+      fill: #fff;
+    }
   }
 
   .btn__burger.active {
@@ -220,3 +227,75 @@
 }
 
 /* end   active btns */
+
+/* begin DARK BACKGROUND */
+.main-wrap--dark {
+  @include min(680) {
+
+  .logo__path {
+    fill: #fff;
+  }
+
+  .header__call {
+    color: #fff;
+    border-color: #fff;
+    svg{
+    fill: #fff;
+
+    }
+
+    &:hover {
+      color: $highlight;
+      border-color: $highlight;
+    }
+  }
+
+  .btn__services {
+    color: $dark;
+    border-color: $dark;
+    background-color: #fff;
+
+    &:hover {
+      color: #fff;
+      border-color: $highlight;
+      background-color: $highlight;
+
+      svg {
+        fill: #fff;
+      }
+    }
+
+    svg {
+      fill: $dark;
+    }
+  }
+
+  .btn__burger {
+    border-color: #fff;
+    background-color: #fff;
+    &:hover {
+      border-color: $highlight;
+      background-color: $highlight;
+      .burger__label::before,
+      .burger__label::after {
+        background: #fff;
+      }
+
+      .burger__label::after {
+        filter: drop-shadow(0 $burger-item-shadow #fff);
+      }
+    }
+  }
+
+  .burger__label::before,
+  .burger__label::after {
+    background: $dark;
+  }
+
+  .burger__label::after {
+    filter: drop-shadow(0 $burger-item-shadow $dark);
+  }
+}
+
+  }
+/* end   DARK BACKGROUND */

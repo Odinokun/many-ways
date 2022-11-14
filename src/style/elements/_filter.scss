@@ -1,0 +1,111 @@
+.filter {
+  z-index: 15;
+  overflow: auto;
+  width: 100%;
+  padding-bottom: 20px;
+
+  @include min(680) {
+    position: absolute;
+    top: 130px;
+    left: 0;
+  }
+  @include min(1200) {
+    display: flex;
+    justify-content: center;
+  }
+  @include min(1400) {
+    top: 100px;
+    pointer-events: none;
+  }
+}
+
+.filter__list {
+  display: flex;
+  flex: none;
+  margin: 0;
+  padding: 0 0 0 15px;
+  list-style: none;
+  pointer-events: auto;
+
+  @include min(680) {
+    padding: 0 0 0 40px;
+  }
+  @include min(1200) {
+    padding: 0;
+  }
+}
+
+.filter__item {
+  overflow: hidden;
+  flex: none;
+  margin-right: 10px;
+  pointer-events: none;
+
+  &:hover {
+    .filter__link {
+      background-color: $highlight;
+    }
+  }
+
+  &.active {
+    pointer-events: none;
+
+    .filter__link {
+      border: 1px solid $highlight;
+
+      @include min(680) {
+        border: none;
+      }
+    }
+
+    .filter__link {
+      background-color: $highlight;
+    }
+  }
+
+  &:last-child {
+    margin-right: 0;
+    padding-right: 15px;
+
+    @include min(680) {
+      padding-right: 40px;
+    }
+    @include min(1025) {
+      padding-right: 0;
+    }
+  }
+}
+
+.filter__link {
+  display: flex;
+  align-items: center;
+  flex: none;
+  height: 30px;
+  padding: 10px 16px 8px 16px;
+  cursor: pointer;
+  transition: .5s;
+  text-decoration: none;
+  pointer-events: auto;
+  border: 1px solid $dark;
+  border-radius: 16px;
+  background-color: #fff;
+
+  @include min(680) {
+    border: none;
+  }
+
+  span {
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 1;
+    display: block;
+    user-select: none;
+    white-space: nowrap;
+    text-transform: uppercase;
+    color: #33332e;
+
+    &:last-child {
+      margin-left: 10px;
+    }
+  }
+}

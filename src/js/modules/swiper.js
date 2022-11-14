@@ -34,4 +34,40 @@ module.exports = function () {
     },
   });
 
+  const portfolioSliderThumb = new Swiper("#portfolio-slider-thumb", {
+    // loop: true,
+    // speed: 4000,
+    spaceBetween: 10,
+    freeMode: true,
+    watchSlidesProgress: true,
+    // centeredSlides: true,
+    grabCursor: true,
+    slidesPerView: 'auto',
+    freeModeMomentum: false,
+    // autoplay: {
+    //   delay: 4000,
+    //   disableOnInteraction: true
+    // },
+  });
+
+  const portfolioSlider = new Swiper("#portfolio-slider", {
+    // loop: true,
+    effect: 'fade',
+    fadeEffect: {
+      crossFade: true
+    },
+    spaceBetween: 10,
+    navigation: {
+      nextEl: ".portfolio-slider__btn--next",
+      prevEl: ".portfolio-slider__btn--prev",
+    },
+    thumbs: {
+      swiper: portfolioSliderThumb,
+    },
+    // autoplay: {
+    //   delay: 4000,
+    //   disableOnInteraction: true
+    // },
+  });
+
 };
