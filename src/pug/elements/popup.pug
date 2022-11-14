@@ -1,7 +1,94 @@
 #popup__layer.popup__layer
 
-//begin popup
-.popup
+//begin popup estimate
+#popup-estimate.popup.popup-estimate
   .popup__close
     +svg('close')
-//end popup
+  .popup__header
+    .popup__title Estimate your project
+    .popup__subtitle Fill the form and our manager contact you.
+  .popup__body
+    form.request__form.request-form
+      .request-form__row
+        .request-form__select.select
+          select
+            option(value="") Select type of service
+            option(value="Kitchen") Kitchen
+            option(value="Bathroom") Bathroom
+            option(value="Flooring") Flooring
+            option(value="Deck") Deck
+            option(value="Basement") Basement
+            option(value="Roofing") Roofing
+          span Select type of service
+          span Type the correct information
+        .input.request-form__input
+          input(placeholder="Square of area")
+          span Square of area
+          span Type the correct information
+      .request-form__row
+        .textarea.request-form__textarea
+          textarea(placeholder="Describe your project")
+          span Describe your project
+          span Type the correct information
+
+      .request-form__row
+        .request-form__file-input-wrap
+          input(type="file" class="multi request-form__file-input" maxlength="100")
+          span.request-form__file-input-placeholder Upload pictures of your area (.JPG / .PNG / Max size 10 mb)
+
+      h3.request-form__title your contacts
+
+      .request-form__row
+        .input.request-form__input
+          input(placeholder="First name")
+          span First name
+          span Type the correct information
+        .input.request-form__input
+          input(placeholder="Last name")
+          span Last name
+          span Type the correct information
+      .request-form__row
+        .input.request-form__input
+          input(placeholder="Phone")
+          span Phone
+          span Type the correct information
+        .input.request-form__input
+          input(placeholder="Email")
+          span Email
+          span Type the correct information
+      .request-form__row
+        button.btn.request-form__btn send request
+//end popup estimate
+
+//begin popup callback
+#popup-callback.popup.popup-callback
+  .popup__close
+    +svg('close')
+  .popup__header
+    .popup__title Estimate your project
+    .popup__subtitle Fill the form and our manager contact you.
+  .popup__body
+    form.request__form.request-form
+      .request-form__row
+        .input.request-form__input
+          input(placeholder="Your name")
+          span Your name
+          span Type the correct information
+        .input.request-form__input
+          input(placeholder="Phone")
+          span Phone
+          span Type the correct information
+      .request-form__row
+        button.btn.request-form__btn send request
+//end popup callback
+
+//begin popup thanks
+#popup-thanks.popup.popup-thanks
+  .popup__close
+    +svg('close')
+  .popup__header
+    .popup__title Thank you for request
+    .popup__subtitle Our manager contact you as soon as possible
+  .popup__body
+    button.btn.request-form__btn go to home page
+//end popup thanks

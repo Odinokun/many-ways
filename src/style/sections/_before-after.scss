@@ -1,6 +1,14 @@
 .services-before-after {
   position: relative;
 
+  .scroll-down {
+    display: none;
+
+    @include min(1025) {
+      display: flex;
+    }
+  }
+
   .container {
     @include min(1025) {
       position: absolute;

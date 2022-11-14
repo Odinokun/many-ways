@@ -7,11 +7,6 @@ $(function() {
   require('./modules/scroll2ancor')();
   require('./modules/input-placeholder')();
   require('./modules/before-after')();
-
-  // begin phone mask
-  // require('./modules/maskedinput')();
-
-  // begin Popup
-  // require('./modules/popup')();
+  require('./modules/popup')();
 
 });
