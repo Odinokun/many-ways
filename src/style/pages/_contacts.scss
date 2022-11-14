@@ -1,0 +1,133 @@
+.contacts {
+  padding-top: 40px;
+
+  @include min(1025) {
+    padding-top: 60px;
+  }
+}
+
+.contacts__items {
+  display: flex;
+  flex-wrap: wrap;
+  padding-bottom: 60px;
+
+  @include min(1025) {
+    padding-bottom: 110px;
+  }
+}
+
+.contacts__item {
+  display: flex;
+  align-items: center;
+  user-select: none;
+  text-decoration: none;
+  color: #33332e;
+  width: 100%;
+  margin-bottom: 20px;
+  @include min(1025) {
+  width: 33.33%;
+
+  }
+  @include min(1200) {
+  width: 25%;
+    margin-bottom: 0;
+
+  }
+  &:hover {
+    text-decoration: underline;
+  }
+
+  span {
+    font-weight: 500;
+    line-height: 1.3;
+    @include responsive-font(20, 16);
+    max-width: 280px;
+    padding-right: 30px;
+    color: #33332e;
+  }
+}
+
+.contacts__item-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: none;
+  width: 48px;
+  height: 48px;
+  margin-right: 16px;
+  border: 1px solid rgba(51, 51, 46, .1);
+  border-radius: 50%;
+
+  svg {
+    fill: #51514e;
+    width: 20px;
+    height: 20px;
+  }
+}
+
+/* begin SOCIALS */
+.contacts__socials {
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+  margin-top: 20px;
+  @include min(1200) {
+    width: 25%;
+    margin-top: 0;
+  }
+}
+
+.contacts__socials-title {
+  font-family: $font;
+  font-size: 12px;
+  font-weight: 400;
+  margin-bottom: 16px;
+  line-height: 1.3;
+  display: block;
+  text-transform: uppercase;
+  color: #33332e;
+  position: relative;
+  width: 100%;
+  @include min(1200) {
+  position: absolute;
+  top: -28px;
+  left: 0;
+
+  }
+}
+
+.contacts__social {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: none;
+  width: 48px;
+  height: 48px;
+  margin-right: 16px;
+  border: 1px solid rgba(51, 51, 46, .1);
+ transition: .5s;
+  border-radius: 50%;
+  &:hover {
+    border-color: $highlight;
+    svg {
+
+    fill: $highlight;
+    }
+  }
+
+  svg {
+ transition: .5s;
+    fill: #51514e;
+    width: 20px;
+    height: 20px;
+  }
+}
+
+/* end   SOCIALS */
+
+.map {
+  height: 450px;
+  background-color: #ccc;
+}
