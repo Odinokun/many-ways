@@ -1,5 +1,9 @@
 .services-top {
-  padding-top: 60px;
+  padding-top: 40px;
+
+  @include min(680) {
+    padding-top: 60px;
+  }
 }
 
 .services-top__double {
