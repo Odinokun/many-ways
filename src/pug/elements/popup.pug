@@ -64,31 +64,35 @@
 #popup-callback.popup.popup-callback
   .popup__close
     +svg('close')
-  .popup__header
-    .popup__title Estimate your project
-    .popup__subtitle Fill the form and our manager contact you.
-  .popup__body
-    form.request__form.request-form
-      .request-form__row
-        .input.request-form__input
-          input(placeholder="Your name")
-          span Your name
-          span Type the correct information
-        .input.request-form__input
-          input(placeholder="Phone")
-          span Phone
-          span Type the correct information
-      .request-form__row
-        button.btn.request-form__btn send request
+  .popup__inn
+    .popup__header
+      .popup__title Callback request
+      .popup__subtitle Fill the form and our manager contact you.
+    .popup__body
+      form.request__form.request-form
+        .request-form__row
+          .input.request-form__input
+            input(placeholder="Your name")
+            span Your name
+            span Type the correct information
+          .input.request-form__input
+            input(placeholder="Phone")
+            span Phone
+            span Type the correct information
+        .request-form__row
+          button.btn.request-form__btn send request
 //end popup callback
 
 //begin popup thanks
 #popup-thanks.popup.popup-thanks
   .popup__close
     +svg('close')
-  .popup__header
-    .popup__title Thank you for request
-    .popup__subtitle Our manager contact you as soon as possible
-  .popup__body
-    button.btn.request-form__btn go to home page
+  .popup__inn
+    .popup__header
+      .popup-thanks__icon
+        +svg('thanks')
+      .popup__title Thank you for request
+      .popup__subtitle Our manager contact you as soon as possible
+    .popup__body
+      button.btn.request-form__btn go to home page
 //end popup thanks
